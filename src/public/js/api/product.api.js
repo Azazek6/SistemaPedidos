@@ -2,7 +2,7 @@ const producto = document.getElementById("producto");
 
 const getObtenerProductoUnico = (producto)=>{
     $.ajax({
-        url:"http://localhost:3000/pedidos/api/productone",
+        url:"/pedidos/api/productone",
         method:"POST",
         async:true,
         data:{producto:producto},

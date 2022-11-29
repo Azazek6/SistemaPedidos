@@ -150,7 +150,7 @@ const tablepedido = (data) => {
 
 const getpedidoRequest = async () => {
   const tabla = document.getElementById("contenedortablepedido");
-  const response = await fetch("http://localhost:3000/pedidos/api");
+  const response = await fetch("/pedidos/api");
   const data = await response.json();
   tabla.innerHTML = tablepedido(data);
 };
@@ -158,7 +158,7 @@ const getpedidoRequest = async () => {
 const getpedidoBusquedad = async (item) => {
   const tabla = document.getElementById("contenedortablepedido");
   $.ajax({
-    url: "http://localhost:3000/pedidos/api/letra",
+    url: "/pedidos/api/letra",
     type: "POST",
     async: true,
     data: { search: item },

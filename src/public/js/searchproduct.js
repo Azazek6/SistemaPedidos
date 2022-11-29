@@ -48,7 +48,7 @@ const tableproduct = (data) => {
 
 const getproductRequest = async () => {
     const tabla = document.getElementById('contenedortableproducto');
-    const response = await fetch("http://localhost:3000/producto/api");
+    const response = await fetch("/producto/api");
     const data = await response.json();
     console.log(data)
     tabla.innerHTML = tableproduct(data);
@@ -57,7 +57,7 @@ const getproductRequest = async () => {
 const getproductBusquedad = async (item) => {
     const tabla = document.getElementById('contenedortableproducto');
     $.ajax({
-        url: "http://localhost:3000/producto/api/letra",
+        url: "/producto/api/letra",
         type: "POST",
         async: true,
         data: { search: item },

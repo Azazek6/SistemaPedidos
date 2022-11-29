@@ -2,7 +2,7 @@ const cliente = document.getElementById("cliente");
 
 const getObtenerClienteUnico = (cliente)=>{
     $.ajax({
-        url:"http://localhost:3000/pedidos/api/clienteone",
+        url:"/pedidos/api/clienteone",
         method:"POST",
         async:true,
         data:{cliente:cliente},

@@ -42,7 +42,7 @@ const getreportRequest = async () => {
 const getpedidoBusquedad = async (item) => {
   const tabla = document.getElementById("contenedortablereport");
   $.ajax({
-    url: "http://localhost:3000/pedidos/api/detail/one",
+    url: "/pedidos/api/detail/one",
     type: "POST",
     async: true,
     data: { search: item },

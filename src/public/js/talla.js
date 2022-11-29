@@ -72,7 +72,7 @@ const clickboton = (e) => {
 
 const getpedidoBusquedad = async (item) => {
   $.ajax({
-    url: "http://localhost:3000/pedidos/api/pedidone",
+    url: "/pedidos/api/pedidone",
     type: "POST",
     async: true,
     data: { id: item },

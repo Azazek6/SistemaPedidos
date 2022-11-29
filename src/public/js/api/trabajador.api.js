@@ -2,7 +2,7 @@ const empleado = document.getElementById("empleado");
 
 const getObtenerEmpleadoUnico = (emple)=>{
     $.ajax({
-        url:"http://localhost:3000/pedidos/api/empleadone",
+        url:"/pedidos/api/empleadone",
         method:"POST",
         async:true,
         data:{emple:emple},

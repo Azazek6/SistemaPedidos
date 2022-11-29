@@ -56,7 +56,7 @@ const tableclient = (data) => {
 
 const getclientRequest = async () => {
     const tabla = document.getElementById('contenedortablecliente');
-    const response = await fetch("http://localhost:3000/clientes/api");
+    const response = await fetch("/clientes/api");
     const data = await response.json();
     tabla.innerHTML = tableclient(data);
 }
@@ -64,7 +64,7 @@ const getclientRequest = async () => {
 const getclientBusquedad = async (item) => {
     const tabla = document.getElementById('contenedortablecliente');
     $.ajax({
-        url: "http://localhost:3000/clientes/api/letra",
+        url: "/clientes/api/letra",
         type: "POST",
         async: true,
         data: {search: item},

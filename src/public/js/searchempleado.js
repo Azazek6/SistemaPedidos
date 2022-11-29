@@ -58,7 +58,7 @@ const tableempleado = (data) => {
 
 const getempleadoRequest = async () => {
   const tabla = document.getElementById("contenedortableempleado");
-  const response = await fetch("http://localhost:3000/trabajadores/api");
+  const response = await fetch("/trabajadores/api");
   const data = await response.json();
   tabla.innerHTML = tableempleado(data);
 };
@@ -66,7 +66,7 @@ const getempleadoRequest = async () => {
 const getempleadoBusquedad = async (item) => {
   const tabla = document.getElementById("contenedortableempleado");
   $.ajax({
-    url: "http://localhost:3000/trabajadores/api/letra",
+    url: "/trabajadores/api/letra",
     type: "POST",
     async: true,
     data: { search: item },
