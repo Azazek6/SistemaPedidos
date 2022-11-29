@@ -1,0 +1,26 @@
+<div class="contenedor-dash">
+    <div class="dash">
+        {{>menu-dash}}
+        <div class="dash2" id="dash2">
+            <div class="menu">
+                <h1><i class="fa-solid fa-bars" id="btnmenu"></i> Reporte</h1>
+            </div>
+            <hr>
+
+            <a class="link" href="/detalle/generar"><i class="fa-solid fa-clipboard"></i> Graficos</a>
+            <h2>Administrar Información de los Reportes</h2>
+
+            {{>mesage}}
+
+            <form>
+                <input type="text" name="search" id="search" placeholder="Search">
+                <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+            </form>
+
+            <div id="contenedortablereport" class="contenedortablescroll"></div>
+
+        </div>
+    </div>
+</div>
+
+<script src="/js/searchreport.js"></script>

@@ -1,0 +1,115 @@
+<div class="contenedor-dash">
+    <div class="dash">
+        {{>menu-dash}}
+        <div class="dash2" id="dash2">
+            <div class="menu">
+                <h1><i class="fa-solid fa-bars" id="btnmenu"></i> Actualizar Pedidos</h1>
+
+            </div>
+            <hr>
+            <div class="button-add-atras">
+                <a href="/pedidos"><i class="fa-solid fa-circle-arrow-left"></i></a>
+            </div>
+            <h2>Administrar Información de los Pedidos</h2>
+            {{>mesage}}
+            <div class="formulario row">
+
+                <form class="row g-3 was-validated" action="/pedidos/updates/{{Pedidos.id}}?_method=PUT" method="post">
+                    <input type="hidden" name="_method" value="PUT">
+                    <input type="hidden" name="pedido" id="pedido" value="{{Pedidos.id}}">
+                    <div class="col-md-6">
+                        <label for="validatedcodigo" class="form-label">Codigo OP</label>
+                        <input type="input" class="form-control" name="codigo" id="codigo" value="{{Pedidos.codigo}}">
+                        <div class="invalid-feedback">
+                            Campo vacío.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputproducto" class="form-label">Producto</label>
+                        <input type="input" class="form-control" name="producto" size="30" id="producto"
+                            value="{{Pedidos.modelo}}" required {{#if isAdmin}} {{else}} readonly {{/if}}>
+                        <input type="hidden" name="idproducto" id="idproducto" readonly value="{{Pedidos.idproducto}}">
+                        <div class="invalid-feedback">
+                            Campo vacío.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputcliente" class="form-label" id="client">Cliente: {{Pedidos.cliente}}</label>
+                        <input type="input" class="form-control" name="cliente" size="30" id="cliente"
+                            value="{{Pedidos.ruc}}" required {{#if isAdmin}} {{else}} readonly {{/if}}>
+                        <input type="hidden" name="idcliente" id="idcliente" readonly value="{{Pedidos.idcliente}}">
+                        <div class="invalid-feedback">
+                            Campo vacío.
+                        </div>
+                    </div>
+                    {{#if isStore}}
+                    <div class="col-md-6">
+                        <label for="inputempleado" class="form-label" id="emple">Empleado: {{Pedidos.empleado}}</label>
+                        <input type="input" class="form-control" name="empleado" size="30" id="empleado"
+                            value="{{Pedidos.trabajador}}" >
+                        <input type="hidden" name="idempleado" id="idempleado" readonly value="{{Pedidos.idempleado}}">
+                    </div>
+                    {{/if}}
+                    <div class="col-md-6">
+                        <label for="inputestado" class="form-label">Estado</label>
+                        <input type="input" class="form-control" name="estado" size="30" id="estado" value="{{Pedidos.estado}}"
+                            readonly>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputtalla" class="form-label">Talla</label>
+                        <input type="input" class="form-control" name="talla" size="30" {{#if isAdmin}} id="talla" {{/if}}  value="{{nameTalla}}"
+                            required {{#if isAdmin}} {{else}} readonly {{/if}}>
+                        <input type="hidden" id="serie" name="serie" readonly value="{{Pedidos.talla}}">
+                        <div class="invalid-feedback">
+                            Campo vacío.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputplataforma" class="form-label">Plataforma</label>
+                        <input type="input" class="form-control" name="plataforma" size="30" id="plataforma"
+                            value="{{Pedidos.plataforma}}" required {{#if isAdmin}} {{else}} readonly {{/if}}>
+                        <div class="invalid-feedback">
+                            Campo vacío.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputtaco" class="form-label">Taco</label>
+                        <input type="input" class="form-control" name="taco" size="30" id="taco"
+                            value="{{Pedidos.taco}}" required {{#if isAdmin}} {{else}} readonly {{/if}}>
+                        <div class="invalid-feedback">
+                            Campo vacío.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputtaco" class="form-label">Cantidad</label>
+                        <input type="input" class="form-control" name="cantidad" size="30" id="cantidad"
+                            value="{{Pedidos.cantidad}}" required {{#if isAdmin}} {{else}} readonly {{/if}}>
+                        <div class="invalid-feedback">
+                            Campo vacío.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputtaco" class="form-label">Unidad</label>
+                        <input type="input" class="form-control" name="unidad" size="30" id="unidad"
+                            value="{{Pedidos.unidad}}" required {{#if isAdmin}} {{else}} readonly {{/if}}>
+                        <div class="invalid-feedback">
+                            Campo vacío.
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2 d-md-block">
+                        <center><button class="btn btn-primary" type="submit">Actualizar</button></center>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+
+{{>talla}}
+
+<script src="/js/talla.js"></script>
+<script src="/js/api/cliente.api.js"></script>
+<script src="/js/api/trabajador.api.js"></script>
+<script src="/js/api/product.api.js"></script>

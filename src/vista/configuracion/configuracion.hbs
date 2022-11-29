@@ -1,0 +1,36 @@
+<div class="contenedor-dash">
+    <div class="dash">
+        {{>menu-dash}}
+        <div class="dash2" id="dash2">
+            <div class="menu">
+                <i class="fa-solid fa-bars" id="btnmenu"></i> 
+                <h1>Configuración</h1>
+            </div>
+            <hr>
+            <div class="button-add-atras">
+                <a href="/home"><i class="fa-solid fa-circle-arrow-left"></i></a>
+            </div>
+            <h2>Configuración</h2>
+            <div class="formulario">
+                <form action="">
+                    <label>Contraseña</label>
+                    <div class="inputs">
+                        <input type="text" name="Codigo" size="30" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,$#\-\/ ]{1,70}"
+                            required>
+                    </div>
+                    <label>Nueva Contraseña</label>
+                    <div class="inputs">
+                        <input type="text" name="Nombre" size="30" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,$#\-\/ ]{1,70}"
+                            required>
+                    </div>
+                    <label>Repetir Contraseña</label>
+                    <div class="inputs">
+                        <input type="text" name="Descripcion" size="30"
+                            pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,$#\-\/ ]{1,70}" required>
+                    </div>
+                    <center><button>Aceptar</button></center>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

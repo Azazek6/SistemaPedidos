@@ -1,0 +1,72 @@
+<div class="contenedor-dash">
+    <div class="dash">
+        {{>menu-dash}}
+        <div class="dash2" id="dash2">
+
+            <div class="menu">
+                <h1><i class="fa-solid fa-bars" id="btnmenu"></i> Agregar Clientes</h1>
+            </div>
+
+            <hr>
+            <div class="button-add-atras">
+                <a href="/clientes"><i class="fa-solid fa-circle-arrow-left"></i></a>
+            </div>
+            <h2>Administrar Información de los Clientes</h2>
+            {{>mesage}}
+
+            <div class="formulario row">
+
+                <form class="row g-3 was-validated" action="/clientes/agregar" method="post">
+                    <div class="col-md-6">
+                        <label for="validatednombre" class="form-label">Nombre</label>
+                        <input type="input" class="form-control" name="nombre" id="nombre" required>
+                        <div class="invalid-feedback">
+                            Campo vacío.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputapellido" class="form-label">Apellido</label>
+                        <input type="input" class="form-control" name="apellido" size="30" id="apellido">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputrazonsocial" class="form-label">Razon Social</label>
+                        <input type="input" class="form-control" name="razonsocial" size="30" id="Razon Social">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputTelefono" class="form-label">Telefono</label>
+                        <input type="input" class="form-control" name="telefono" size="30" id="telefono">
+                    </div>
+                    <div class="col-12">
+                        <label for="inputcorreo" class="form-label">Correo</label>
+                        <input type="input" class="form-control" name="correo" size="30" id="correo">
+                    </div>
+                    <div class="col-12">
+                        <label for="inputdireccion" class="form-label">Direccion</label>
+                        <input type="input" class="form-control" name="direccion" size="30" id="direccion">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputRuc" class="form-label">Ruc</label>
+                        <input type="input" class="form-control" name="ruc" id="ruc" required>
+                        <div class="invalid-feedback">
+                            Campo vacío.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputtipocliente" class="form-label">Tipo Cliente</label>
+                        <select id="Tipocliente" name="tipocliente" class="form-select"
+                            aria-label="Default select example" required>
+                            <option value="Cliente Jurídico" {{#if tipocliente}}selected{{else}}{{/if}}>Cliente
+                                Jurídico</option>
+                            <option value="Cliente Natural" {{#if tipocliente}}{{else}}selected{{/if}}>Cliente
+                                Natural</option>
+                        </select>
+                    </div>
+                    <div class="d-grid gap-2 d-md-block">
+                        <center><button class="btn btn-success" type="submit">Agregar</button></center>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

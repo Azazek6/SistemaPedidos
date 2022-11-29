@@ -1,0 +1,28 @@
+<div class="contenedor-dash">
+    <div class="dash">
+        {{>menu-dash}}
+        <div class="dash2" id="dash2">
+            <div class="menu">
+                <h1><i class="fa-solid fa-bars" id="btnmenu"></i> Clientes</h1>
+            </div>
+            <hr>
+            {{#if isAdmin}}
+            <a class="link" href="/clientes/agregar" id="link"><i class="fa-solid fa-circle-plus"></i> Agregar</a>
+            {{/if}}
+            {{#if isJefatura}}
+            <a class="link" href="/clientes/agregar" id="link"><i class="fa-solid fa-circle-plus"></i> Agregar</a>
+            {{/if}}
+            <h2>Administrar Información de los Clientes</h2>
+            {{>mesage}}
+
+            <form>
+                <input type="text" name="search" id="search" placeholder="Search">
+                <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+            </form>
+
+            <div id="contenedortablecliente" class="contenedortablescroll"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/js/searchclient.js"></script>

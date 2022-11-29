@@ -1,0 +1,31 @@
+<div class="contenedor-dash">
+    <div class="dash">
+        {{>menu-dash}}
+        <div class="dash2" id="dash2">
+            <div class="menu">
+                <i class="fa-solid fa-bars" id="btnmenu"></i> 
+                <h1>Generar Reporte</h1>
+            </div>
+            <hr>
+            <div class="button-add-atras">
+                <a href="/detalle"><i class="fa-solid fa-circle-arrow-left"></i></a>
+            </div>
+            <h2>Informe de Reporte</h2>
+            <div class="mesage" id="message-grafic"></div>
+
+            <input type="text" style="margin-left: 0;" placeholder="Codigo Empleado" id="idEmpleado">&nbsp;
+            <label for="">Fecha Inicio</label>&nbsp;
+            <input type="date" id="dateFirts">&nbsp;
+            <label for="">Fecha Final</label>&nbsp;
+            <input type="date" id="dateLast">&nbsp;
+            <button id="btnReport">Buscar</button>
+
+            <div style="margin: 0 auto; width: 80%;" id="content-chart">
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="/js/dataGrafic.js"></script>

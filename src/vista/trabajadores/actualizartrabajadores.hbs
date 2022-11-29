@@ -1,0 +1,86 @@
+<div class="contenedor-dash">
+    <div class="dash">
+        <div class="dash1" id="dash">
+            <a href="/home">
+                <h1>Sistema de Pedidos</h1>
+            </a>
+            <div class="dash-modules">
+                <a href="/clientes">Clientes <img src="/Imagenes/clientes.jpg"></a>
+            </div>
+            <div class="dash-modules">
+                <a href="/productos">Productos <img src="/Imagenes/shoes.png"></a>
+            </div>
+            <div class="dash-modules">
+                <a href="/trabajadores">Trabajadores <img src="/Imagenes/trabajador.jpg"></a>
+            </div>
+            <div class="dash-modules">
+                <a href="/detalle">Reportes <img src="/Imagenes/report.png"></a>
+            </div>
+            <div class="dash-modules">
+                <a href="/pedidos">Pedidos <img src="/Imagenes/pedidos.png"></a>
+            </div>
+            <div class="dash-modules">
+                <a href="/configuracion">Configuración <img src="/Imagenes/confg.png"></a>
+            </div>
+            <div class="dash-modules">
+                <a href="/">Cerrar Sesión <img src="/Imagenes/cerrar.jfif"></a>
+            </div>
+        </div>
+        <div class="dash2">
+            <div class="menu">
+                <h1><i class="fa-solid fa-bars" id="btnmenu"></i>
+                <h1>Actualizar Trabajadores</h1>
+            </div>
+            <hr>
+            <div class="button-add-atras">
+                <a href="/trabajadores"><i class="fa-solid fa-circle-arrow-left"></i></a>
+            </div>
+            <h2>Administrar Información de los Trabajadores</h2>
+            {{>mesage}}
+
+            <div class="formulario" class="row">
+
+                <form class="row g-3 was-validated" action="/trabajadores/update/{{Trabajadores.id}}?_method=PUT" method="post">
+                    <input type="hidden" name="_method" value="PUT">
+
+                    <div class="col-md-6">
+                        <label for="inputnombre" class="form-label">Codigo</label>
+                        <input type="input" class="form-control" name="CodigoTrb" size="30" id="codigo"
+                            value="{{Trabajadores.codigo}}">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputPassword4" class="form-label">Nombre</label>
+                        <input type="input" class="form-control" name="Nombre" size="30" id="nombre"
+                            value="{{Trabajadores.nombre}}" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputrazonsocial" class="form-label">Telefono</label>
+                        <input type="input" class="form-control" name="Telefono" size="30" id="Telefono"
+                            value="{{Trabajadores.telefono}}">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputCargo" class="form-label">Cargo</label>
+                        <input type="input" class="form-control" name="Cargo" size="30" id="Cargo"
+                            value="{{Trabajadores.cargo}}" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputcorreo" class="form-label">DNI</label>
+                        <input type="input" class="form-control" name="DNI" size="30" id="DNI"
+                            value="{{Trabajadores.DNI}}">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputestado" class="form-label">Estado</label>
+                        <select id="Estado" name="Estado" class="form-select" aria-label="Default select example" required>
+                            <option value="Activo" {{#if estado}}selected{{else}}{{/if}}>Activo</option>
+                            <option value="Desactivado" {{#if estado}}{{else}}selected{{/if}}>Desactivado</option>
+                        </select>
+                    </div>
+                    <div class="d-grid gap-2 d-md-block">
+                        <center><button class="btn btn-primary" type="submit">Actualizar</button></center>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

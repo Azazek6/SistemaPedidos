@@ -1,0 +1,49 @@
+<div class="contenedor-dash">
+    <div class="dash">
+        {{>menu-dash}}
+        <div class="dash2" id="dash2">
+
+            <div class="menu">
+                <h1><i class="fa-solid fa-bars" id="btnmenu"></i>  Agregar trabajador</h1>
+            </div>
+
+            
+            <hr>
+            <div class="button-add-atras">
+                <a href="/trabajadores"><i class="fa-solid fa-circle-arrow-left"></i></a>
+            </div>
+            <h2>Administrar Información de los Trabajadores</h2>
+            {{>mesage}}
+
+            <div class="formulario" class="row">
+
+                <form class="row g-3 was-validated" action="/trabajadores/agregar" method="post">
+                    <div class="col-md-6">
+                        <label for="inputcodigo" class="form-label">Codigo</label>
+                        <input type="input" class="form-control" name="CodigoTrb" size="30" id="Codigo">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inpuNombre" class="form-label">Nombre</label>
+                        <input type="input" class="form-control" name="Nombre" size="30" id="Nombre" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputDNI" class="form-label">DNI</label>
+                        <input type="input" class="form-control" name="DNI" size="30" id="DNI">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputcelular" class="form-label">Celular</label>
+                        <input type="input" class="form-control" name="Telefono" size="30" id="Celular">
+                    </div>
+                    <div class="col-12">
+                        <label for="inputcargo" class="form-label">Cargo</label>
+                        <input type="input" class="form-control" name="Cargo" size="30" id="Cargo" required>
+                    </div>
+                    <div class="d-grid gap-2 d-md-block">
+                        <center><button class="btn btn-success" type="submit">Agregar</button></center>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

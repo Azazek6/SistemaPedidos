@@ -1,0 +1,34 @@
+<div class="contenedor-dash">
+    <div class="dash">
+        {{>menu-dash}}
+        <div class="dash2" id="dash2">
+            <div class="menu">
+                <h1><i class="fa-solid fa-bars" id="btnmenu"></i> Panel Principal</h1>
+            </div>
+            <hr><br>
+            <div class="dash-cont">
+                <div class="dash2-botones">
+                    <a href="/clientes">
+                        <img src="Imagenes/clientes.jpg" alt="clientes">
+                        Clientes
+                    </a>
+                </div>
+                <div class="dash2-botones">
+                    <a href="/producto">
+                        <img src="Imagenes/zapato.jpg" alt="Productos">
+                        Productos
+                    </a>
+                </div>
+                <div class="dash2-botones">
+                    <a href="/detalle">
+                        <img src="Imagenes/report.png" alt="Reporte">
+                        Reporte
+                    </a>
+                </div>
+            </div> <br><br>
+            {{#if isDesigner}}
+            <div class="notify" id="notify"></div>
+            {{/if}}
+        </div>
+    </div>
+</div>

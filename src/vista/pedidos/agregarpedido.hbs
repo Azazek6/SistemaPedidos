@@ -1,0 +1,105 @@
+<div class="contenedor-dash">
+    <div class="dash">
+        {{>menu-dash}}
+        <div class="dash2" id="dash2">
+
+            <div class="menu">
+                <h1><i class="fa-solid fa-bars" id="btnmenu"></i> Agregar Pedido</h1>
+            </div>
+
+            <hr>
+            <div class="button-add-atras">
+                <a href="/pedidos"><i class="fa-solid fa-circle-arrow-left"></i></a>
+            </div>
+            <h2>Administrar Información de los Pedidos</h2>
+            {{>mesage}}
+
+            <div class="formulario row">
+                <form class="row g-3 was-validated" action="/pedidos/agregar" method="post">
+                    <div class="col-md-6">
+                        <label for="validatedcodigo" class="form-label">Codigo OP</label>
+                        <input type="input" class="form-control" name="codigo" id="codigo" readonly>
+                        <div class="invalid-feedback">
+                            Campo vacío.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputproducto" class="form-label">Producto</label>
+                        <input type="input" class="form-control" name="producto" size="30" id="producto" required>
+                        <input type="hidden" name="idproducto" id="idproducto" readonly>
+                        <div class="invalid-feedback">
+                            Campo vacío.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputcliente" class="form-label" id="client">Cliente:</label>
+                        <input type="input" class="form-control" name="cliente" size="30" id="cliente" required>
+                        <input type="hidden" name="idcliente" id="idcliente" readonly>
+                        <div class="invalid-feedback">
+                            Campo vacío.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputempleado" class="form-label" id="emple">Empleado: </label>
+                        <input type="input" class="form-control" name="empleado" size="30" id="empleado" readonly>
+                        <input type="hidden" name="idempleado" id="idempleado" readonly>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputestado" class="form-label">Estado</label>
+                        <input type="input" class="form-control" name="estado" size="30" id="estado" value="DISEÑADOR"
+                            readonly>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputtalla" class="form-label">Talla</label>
+                        <input type="input" class="form-control" name="talla" size="30" id="talla" required readonly>
+                        <input type="hidden" id="serie" name="serie" readonly>
+                        <input type="hidden" id="t34" name="t34" readonly>
+                        <input type="hidden" id="t35" name="t35" readonly>
+                        <input type="hidden" id="t36" name="t36" readonly>
+                        <input type="hidden" id="t37" name="t37" readonly>
+                        <input type="hidden" id="t38" name="t38" readonly>
+                        <input type="hidden" id="t39" name="t39" readonly>
+                        <input type="hidden" id="t40" name="t40" readonly>
+                        <div class="invalid-feedback">
+                            Campo vacío.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputplataforma" class="form-label">Plataforma</label>
+                        <input type="input" class="form-control" name="plataforma" size="30" id="plataforma" required>
+                        <div class="invalid-feedback">
+                            Campo vacío.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputtaco" class="form-label">Taco</label>
+                        <input type="input" class="form-control" name="taco" size="30" id="taco" required>
+                        <div class="invalid-feedback">
+                            Campo vacío.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputtaco" class="form-label">Cantidad</label>
+                        <input type="input" class="form-control" name="cantidad" size="30" id="cantidad" required>
+                        <div class="invalid-feedback">
+                            Campo vacío.
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2 d-md-block">
+                        <center><button class="btn btn-success" type="submit">Agregar</button></center>
+                    </div>
+
+                </form>
+                {{>talla}}
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<script src="/js/talla.js"></script>
+<script src="/js/api/cliente.api.js"></script>
+<script src="/js/api/trabajador.api.js"></script>
+<script src="/js/api/product.api.js"></script>

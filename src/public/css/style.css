@@ -1,0 +1,703 @@
+body {
+  /*CUERPO GENERAL DE LA PLANTILLA */
+  background: white;
+  margin: 0px;
+  font-family: 'Ubuntu', sans-serif;
+  background-size: 100% 110%;
+  /*Toda la pantalla*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* MODIFICACION DE LOS TAMAÑOS DE LAS LETRAS */
+  margin-bottom: 20px;
+  padding: 0;
+  /*margenes del login*/
+}
+
+.login {
+  /* LOGIN PRINCIPAL */
+  margin: 0 auto;
+  max-width: 500px;
+  /*estructura del login*/
+}
+
+.login-header {
+  /* CABECERA DEL LOGIN */
+  color: #000;
+  text-align: center;
+  font-size: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  line-height: 50px;
+  /*Letras principal del login*/
+}
+
+.login-form {
+  /* FORMULARIO DEL LOGIN */
+  border: .5px solid #fff;
+  background: #f79fbe;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #000;
+  box-sizing: border-box;
+  padding-top: 15px;
+  padding-bottom: 10%;
+  margin: 5% auto;
+  text-align: center;
+  /*Cuadro de login*/
+}
+
+.login-form h3 {
+  /* LETRA DEL LOGIN H3*/
+  text-align: left;
+  margin-left: 40px;
+  color: #000;
+  /*Usuario y Contraseña*/
+}
+
+.login input[type="text"],
+/* CAMPOR DEL LOGIN */
+.login input[type="password"] {
+  max-width: 400px;
+  width: 80%;
+  line-height: 3em;
+  font-family: 'Ubuntu', sans-serif;
+  margin: 1em 2em;
+  border-radius: 5px;
+  border: 2px solid #f2f2f2;
+  outline: none;
+  padding-left: 10px;
+}
+
+.login-form input[type="button"] {
+  /* INPUTS DEL LOGIN */
+  height: 30px;
+  width: 100px;
+  background: #fff;
+  border: 1px solid #f2f2f2;
+  border-radius: 20px;
+  color: slategrey;
+  text-transform: uppercase;
+  font-family: 'Ubuntu', sans-serif;
+  cursor: pointer;
+}
+
+.no-access {
+  /*¿no se puede acceder a tu cuenta*/
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+  text-align: center;
+
+}
+
+.nav-login {
+  /* CABECERA DE LOGIN */
+  background-color: #c8638c;
+  width: 100%;
+  height: 110px;
+}
+
+.nav-login img {
+  /* CABECERA DE LOGIN IMAGEN */
+  text-align: left;
+  height: 100%;
+}
+
+.principal-header {
+  /* CABECERA DE LOGIN */
+  background-color: #fda2e4;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-major {
+  /* CUERPO PRINCIPAL */
+  margin: 0 auto;
+  width: 50%;
+}
+
+.nav-major img {
+  /* CUERPO PRINCIPAL */
+  text-align: center;
+  width: 80%;
+  margin-top: 30px;
+}
+
+.principal-letra {
+  /* CUERPO PRINCIPAL */
+  color: white;
+  text-align: center;
+  margin: 0px;
+  margin-left: 10px;
+}
+
+a {
+  /* SISTEMA PEDIDOS */
+  color: white;
+  margin-right: 10px;
+}
+
+.dash {
+  /* MANEJO DEL PANEL PRINCIPAL */
+  width: 100%;
+  display: flex;
+}
+
+.contenedor-dash .dash .dash1 .dash-modules a img {
+  /*ESTILO DE MIS RUTAS IMAGENES PRINCIPALES*/
+  width: 10%;
+  height: 10%;
+  border-radius: 1px;
+  gap: 30px;
+
+}
+
+.dash .dash1 h1 {
+  font-size: 20px;
+}
+
+.dash .dash1 {
+  /*ESTILOS DE MIS MODULOS PRINCIPALES */
+  background-color: #012c4e;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  transition: all 0.7s;
+  width: 25%;
+  height: 614px;
+}
+
+
+.dash .dash1 .dash-modules a {
+  /*ESTILOS DE MIS MODULOS PRINCIPALES*/
+  border: 3px solid darkturquoise;
+  color: black;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-decoration: none;
+  width: 100%;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  justify-content: space-between;
+  font-weight: bold;
+  padding: 20px;
+  font-size: 10px;
+}
+
+.dash .dash1 .dash-modules a:hover {
+  /*EFECTO DE MI MOODULOS*/
+  background: #b4d8e7;
+}
+
+.dash .dash2 {
+  /*ESTILO DE MI DASH2*/
+  background-color: white;
+  width: 100%;
+  padding: 10px;
+}
+
+.dash .dash2 hr {
+  /*ESTILO DE MI DASH2 LINEA PRINCIPAL*/
+  border: 2px solid #b4d8e7;
+  background-color: #012c4e;
+  width: 100%;
+}
+
+.dash .dash2 .dash-cont {
+  /*ESTILO DE MIS IMAGENES PRINCIPALES*/
+  display: flex;
+  width: 100%;
+}
+
+.dash .dash2 .dash-cont .dash2-botones {
+  /*ESTILO DE MI BOTONES*/
+  display: flex;
+  width: 100%;
+}
+
+.dash .dash2 .dash-cont .dash2-botones a {
+  /*ESTILO DE LAS LETRAS DE MI BOTONES*/
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  display: grid;
+  gap: 10px;
+}
+
+.dash .dash2 .dash-cont .dash2-botones a img {
+  width: 150px;
+  height: 150px;
+  gap: 30px;
+  text-align: center;
+}
+
+.contenedor-dash .dash .dash1 a h1 {
+  color: white;
+  text-align: center;
+}
+
+.contenedor-dash .dash .dash1 a {
+  text-decoration: none;
+}
+
+.contenedor-dash .dash .dash2 .contenedor-table .table {
+  border: 1px solid white;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  font-size: small;
+  overflow: scroll;
+  font-size: 10px;
+}
+
+.contenedor-dash .dash .dash2 .contenedor-table .table td,
+table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-size: 9px;
+}
+
+
+.table td:nth-child(even) {
+  background-color: #f2f2f2;
+  color: black;
+  font-weight: bold;
+}
+
+.table th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  background-color: #04AA6D;
+  color: white;
+}
+
+
+.contenedor-dash .dash .dash2 h2 {
+  background-color: #b4d8e7;
+  padding: 10px;
+  font-family: Cambria;
+  font-size: 15px;
+}
+
+.contenedor-dash .dash .dash2 h1 {
+  font-size: 25px;
+}
+
+.contenedor-dash .dash .dash2 a.link {
+  margin-left: 90%;
+  display: flex;
+  transition-duration: 0.4s;
+  border: 2px solid #4CAF50;
+  width: 10%;
+  border-radius: 10px;
+  padding: 10px;
+  text-decoration: none;
+  background-color: white;
+  font-size: 12px;
+  justify-content: space-between;
+
+
+}
+
+.contenedor-dash .dash .dash2 a.link:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+.contenedor-dash .dash .dash2 .button-add-atras {
+  width: 100%;
+  text-align: right;
+}
+
+.contenedor-dash .dash .dash2 .formulario {
+  /*Formulario generales*/
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  border-radius: 10px;
+  background-color: white;
+  padding: 2%;
+  text-align: left;
+  width: 100%;
+  margin: auto;
+  border: 2px solid cornflowerblue;
+  box-shadow: 5px 5px 5px #b4d8e7;
+
+}
+
+.contenedor-dash .dash .dash2 .formulario-talla {
+  border-radius: 10px;
+  background-color: white;
+  padding: 3%;
+  width: 80%;
+  border: 4px solid grey;
+  box-shadow: 5px 5px 5px #000;
+  background-color: #ddd;
+  margin: auto;
+}
+
+
+.contenedor-dash .dash .dash2 .formulario label {
+  font-weight: bold;
+  display: grid;
+  margin-bottom: 10px;
+}
+
+.contenedor-dash .dash .dash2 .formulario .inputs input[type="text"] {
+  width: 100%;
+  padding: 10px 5px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid white;
+  background-color: #ddd;
+}
+
+button {
+  cursor: pointer;
+}
+
+.contenedor-dash .dash .dash2 .inputs-reporte input[type="date"] {
+  border: 5px solid #b4d8e7;
+  border-right: none;
+  border-top: none;
+  border-radius: 3px;
+  background-color: whitesmoke;
+  width: 50%;
+  padding: 10px;
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+.contenedor-dash .dash .dash2 .inputs-reporte input[type="text"] {
+  border: 5px solid #b4d8e7;
+  border-right: none;
+  border-top: none;
+  border-radius: 3px;
+  background-color: whitesmoke;
+  width: 50%;
+  padding: 10px;
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.contenedor-dash .dash .dash2 .Report label {
+  font-weight: bold;
+  font-size: small;
+}
+
+.notify-ped {
+  font-weight: bold;
+  margin-left: -100px;
+  color: white;
+  background-color: #049d65;
+  border-radius: 20px;
+}
+
+.contenedor-dash .dash .dash2 .Report button {
+  text-align: center;
+  height: 50px;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+}
+
+.contenedor-dash .dash .dash2 img {
+  height: 50px;
+  width: 60px;
+}
+
+.contenedor-dash .dash .dash2 .Report {
+  display: flex;
+  width: 100%;
+}
+
+.contenedor-dash .dash .dash2 .Report .inputs-reporte {
+  width: 30%;
+}
+
+.contenedor-dash .dash .dash2 .Report button {
+  width: 100%;
+}
+
+.contenedor-dash .dash .dash2 .menu {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.contenedor-dash .dash .dash2 .menu i:hover {
+  color: #4CAF50;
+  font-size: 120%;
+}
+
+
+.accion {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+.accion button {
+  color: red;
+  border: none;
+  background-color: transparent;
+}
+
+.accion button:hover {
+  opacity: .5;
+}
+
+.contenedor-dash .dash .dash2 .contenedor-table .table .accion a {
+  color: blue;
+}
+
+.contenedor-dash .dash .dash2 .contenedor-table .table .accion a:hover {
+  opacity: .5;
+}
+
+.contenedor-table td {
+  background-color: slategrey;
+  color: white;
+}
+
+img.zapato:hover {
+  -webkit-transform: scale(1.8);
+  transform: scale(1.8);
+}
+
+input[type=text] {
+
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  background-repeat: no-repeat;
+  padding: 0.4%;
+  width: 18%;
+  margin-left: 78%;
+  margin-bottom: 8px;
+  font-size: 10px;
+}
+
+.acciondash1 {
+  margin-left: -25%;
+}
+
+.acciondash2 {
+  width: 100%;
+}
+
+.link {
+  width: 100%;
+}
+
+.contenedor-dash .dash .dash2 a.i {
+  height: 50%;
+}
+
+.accion .check {
+  color: green;
+}
+
+.contenedortablescroll {
+  overflow: scroll;
+  max-height: 380px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1336px) {
+  .acciondash1 {
+    margin-left: -25%;
+  }
+
+  .acciondash2 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 984px) {
+  .contenedor-dash .dash .dash1 .dash-modules a img {
+    width: 10%;
+    height: 10%;
+  }
+
+  .dash .dash1 {
+    height: 600px;
+  }
+
+  .dash .dash1 h1 {
+    font-size: 10px;
+  }
+
+  .dash .dash1 .dash-modules a {
+    padding: 8px;
+    font-size: 10px;
+  }
+
+  .contenedor-dash .dash .dash2 a.link {
+    margin-left: 90%;
+    width: 10%;
+    font-size: 8px;
+  }
+
+  input[type=text] {
+    width: 18%;
+    margin-left: 78%;
+    margin-bottom: 8px;
+    font-size: 10px;
+  }
+
+  .contenedor-dash .dash .dash2 .contenedor-table .table {
+    font-size: 10px;
+  }
+
+  .dash .dash2 h2 {
+    font-size: 15px;
+  }
+
+  .dash .dash2 h1 {
+    font-size: 18px;
+  }
+
+  .contenedor-dash .dash .dash2 .contenedor-table .table td,
+  table th {
+    font-size: 8px;
+  }
+
+}
+
+@media (max-width: 900px) {
+  .contenedor-dash .dash .dash1 .dash-modules a img {
+    width: 15%;
+    height: 15%;
+  }
+
+  .dash .dash1 h1 {
+    font-size: 8px;
+  }
+
+  .dash .dash1 .dash-modules a {
+    padding: 8px;
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 420px) {
+  .contenedor-dash .dash .dash1 .dash-modules a img {
+    width: 10%;
+    height: 10%;
+  }
+
+  .dash .dash1 {
+    width: 90%;
+  }
+
+  .dash .dash1 h1 {
+    font-size: 18px;
+  }
+
+  .dash .dash1 .dash-modules a {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .dash .dash2 {
+    margin-right: -200px;
+    width: 100%;
+  }
+
+  .acciondash1 {
+    width: 0;
+    margin-left: -90%;
+  }
+
+  .acciondash2 {
+    width: 0%;
+  }
+
+  .contenedor-dash .dash .dash2 a.link {
+    margin-left: 280px;
+    width: 80px;
+    font-size: 8px;
+  }
+
+  input[type=text] {
+    width: 100px;
+    margin-left: 250px;
+    margin-bottom: 8px;
+    font-size: 10px;
+  }
+
+  .contenedor-dash .dash .dash2 .contenedor-table .table {
+    font-size: 10px;
+  }
+
+  .dash .dash2 h2 {
+    font-size: 15px;
+    width: 350px;
+  }
+
+  .dash .dash2 h1 {
+    font-size: 15px;
+    display: flex;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .contenedor-dash .dash .dash2 .contenedor-table .table td,
+  table th {
+    font-size: 6px;
+  }
+
+  .contenedor-dash .dash .dash2 form>i {
+    display: none;
+  }
+
+  .contenedortablescroll {
+    overflow: scroll;
+    width: 350px;
+  }
+
+  .dash .dash2 .dash-cont {
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 50px;
+    width: 100%;
+    align-content: center;
+  }
+
+  .dash .dash2 .dash-cont .dash2-botones a img {
+    width: 90px;
+    height: 90px;
+    text-align: center;
+  }
+
+  .dash .dash2 .dash-cont .dash2-botones a {
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+}
