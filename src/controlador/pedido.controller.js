@@ -301,6 +301,10 @@ export const endProccess = async (req, res) => {
     name = "ENSUELADOR";
   }
   if (status[0].PedEstado == "ENSUELADOR") {
+    name = "ALISTADO";
+    action = false;
+  }
+  if (status[0].PedEstado == "ALISTADO") {
     name = "COMPLETADO";
   }
   if (status[0].PedEstado == "COMPLETADO") {

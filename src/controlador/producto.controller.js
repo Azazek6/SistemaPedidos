@@ -50,7 +50,7 @@ export const getAgregar = async (req, res) => {
 export const add = async (req, res) => {
     subirImagen(req, res, async (err) => {
         if (err) {
-            err.message = "Éxiste un error"
+            err.message = "Agregado con éxito"
             req.flash("mensaje_error", err)
             return res.redirect("/producto/agregar");
         }

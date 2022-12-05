@@ -104,8 +104,10 @@ export const VistaActualizar = async (req, res) => {
 
     let tipocliente = false;
     rows.map((item)=>{
-        tipocliente = item.TipoCliente == "Cliente Jurídico" ? true: false;
+        tipocliente = item.TipoCliente == "CLIENTE JURÍDICO" ? true: false;
     })
+
+    console.log(tipocliente);
 
     res.render("clientes/actualizarclientes", {Clientes,estado,tipocliente})
 
