@@ -14,11 +14,7 @@ const tableproduct = (data) => {
                         ${rolUser.value == 1 ? `
         <td>
             <div class="accion">
-                <form action="/clientes/delete/${item.Id}?_method=DELETE" method="post">
-                    <button><i class="fa-solid fa-trash"></i></button>
-                    <input type="hidden" name="_method" value="DELETE">
-                </form>
-                <a href="/clientes/actualizar/${item.Id}">
+                <a href="/producto/actualizar/${item.Id}">
                     <i class="fa-solid fa-pen-to-square"></i>
                 </a>
             </div>

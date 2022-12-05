@@ -18,11 +18,11 @@ const tableempleado = (data) => {
                     ? `
                         <td>
                             <div class="accion">
-                                <form action="/clientes/delete/${item.Id}?_method=DELETE" method="post">
+                                <form action="/trabajadores/delete/${item.Id}?_method=DELETE" method="post">
                                     <button><i class="fa-solid fa-trash"></i></button>
                                     <input type="hidden" name="_method" value="DELETE">
                                 </form>
-                                <a href="/clientes/actualizar/${item.Id}">
+                                <a href="/trabajadores/actualizar/${item.Id}">
                                     <i class="fa-solid fa-pen-to-square"></i>
                                 </a>
                             </div>

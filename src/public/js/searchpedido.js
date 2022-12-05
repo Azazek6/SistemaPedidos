@@ -1,3 +1,6 @@
+
+const rol = document.getElementById("rolUser");
+
 const formato = (date) => {
   let newDate = new Date(date);
   return `${newDate.getDate()}-${
@@ -110,11 +113,11 @@ const tablepedido = (data) => {
                 }"><i class="fa-solid fa-pen-to-square"></i></a>
                 ${
                   item.estado != "COMPLETADO"
-                    ? `
-                <form action="/pedidos/end/${item.id}" method="post">
-                    <button><i class="fa-solid fa-circle-check"></i></button>
-                </form>
-                `
+                    ? rol.value != 1 ? `
+                    <form action="/pedidos/end/${item.id}" method="post">
+                        <button><i class="fa-solid fa-circle-check"></i></button>
+                    </form>
+                    ` : ""
                     : ""
                 }
                 
