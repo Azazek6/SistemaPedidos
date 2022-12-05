@@ -18,7 +18,7 @@
                 <form class="row g-3 was-validated" action="/pedidos/agregar" method="post">
                     <div class="col-md-6">
                         <label for="validatedcodigo" class="form-label">Codigo OP</label>
-                        <input type="input" class="form-control" name="codigo" id="codigo" readonly>
+                        <input type="input" class="form-control" name="codigo" id="codigo" {{#if isAdmin}}readonly{{/if}}>
                         <div class="invalid-feedback">
                             Campo vacío.
                         </div>

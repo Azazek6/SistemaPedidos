@@ -19,7 +19,7 @@
                     <input type="hidden" name="pedido" id="pedido" value="{{Pedidos.id}}">
                     <div class="col-md-6">
                         <label for="validatedcodigo" class="form-label">Codigo OP</label>
-                        <input type="input" class="form-control" name="codigo" id="codigo" value="{{Pedidos.codigo}}">
+                        <input type="input" class="form-control" name="codigo" id="codigo" value="{{Pedidos.codigo}}"  {{#if isAdmin}}readonly{{/if}}>
                         <div class="invalid-feedback">
                             Campo vacío.
                         </div>
